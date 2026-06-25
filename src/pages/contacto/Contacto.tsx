@@ -82,7 +82,7 @@ export default function Contacto() {
                 </div>
                 <div>
                   <p className="text-[10px] uppercase tracking-wider text-muted-foreground/60">Enviar correo</p>
-                  <a href="mailto:luis@example.com" className="text-xs font-semibold hover:underline text-foreground">luis@example.com</a>
+                  <a href="mailto:luisrramirez165@gmail.com" className="text-xs font-semibold hover:underline text-foreground">luisrramirez165@gmail.com</a>
                 </div>
               </div>
 
@@ -92,7 +92,7 @@ export default function Contacto() {
                 </div>
                 <div>
                   <p className="text-[10px] uppercase tracking-wider text-muted-foreground/60">Ubicación</p>
-                  <p className="text-xs font-semibold text-foreground">Madrid, España / Remoto</p>
+                  <p className="text-xs font-semibold text-foreground">San Cristóbal de las Casas, Chiapas, México</p>
                 </div>
               </div>
             </div>
