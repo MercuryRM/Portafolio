@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import { sendContactEmail } from "../../services/contactService";
 
 const Github = ({ size = 24, className = "" }: { size?: number; className?: string }) => (
   <svg
@@ -40,16 +41,22 @@ const Linkedin = ({ size = 24, className = "" }: { size?: number; className?: st
 
 export default function Contacto() {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
-  const [status, setStatus] = useState<"idle" | "sending" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    setTimeout(() => {
+    
+    const success = await sendContactEmail(formData);
+    
+    if (success) {
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setStatus("idle"), 4000);
-    }, 1500);
+      setTimeout(() => setStatus("idle"), 5000);
+    } else {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   return (
@@ -189,8 +196,14 @@ export default function Contacto() {
             </button>
 
             {status === "success" && (
-              <div className="p-3 rounded-md bg-white/[0.02] border border-border text-foreground text-xs text-center animate-fade-in">
+              <div className="p-3 rounded-md bg-white/[0.02] border border-green-500/30 text-green-400 text-xs text-center animate-fade-in">
                 ¡Gracias! Tu mensaje ha sido enviado exitosamente. Me pondré en contacto contigo pronto.
+              </div>
+            )}
+
+            {status === "error" && (
+              <div className="p-3 rounded-md bg-white/[0.02] border border-red-500/30 text-red-400 text-xs text-center animate-fade-in">
+                Hubo un problema al enviar tu mensaje. Por favor, verifica tu clave de acceso o inténtalo de nuevo más tarde.
               </div>
             )}
           </form>
