@@ -2,24 +2,24 @@ import { Briefcase, GraduationCap, Heart, Rocket, ShieldCheck, Trophy } from "lu
 
 const experience = [
   {
-    role: "Desarrollador Full Stack Senior",
-    company: "TechSolutions Co.",
+    role: "Desarrollador Web Front End",
+    company: "Proyectos Personales & Freelance",
     period: "2024 - Presente",
-    description: "Liderazgo en el desarrollo de arquitecturas de microservicios usando Node.js y React, mejorando el rendimiento de la aplicación en un 40%."
+    description: "Construcción de aplicaciones web con React, TypeScript y Firebase. Enfocado en crear interfaces limpias, funcionales y con buena experiencia de usuario."
   },
   {
-    role: "Desarrollador Front End",
-    company: "Innovate Studio",
-    period: "2022 - 2024",
-    description: "Desarrollo de interfaces de usuario interactivas, accesibles y optimizadas para SEO utilizando Next.js y Tailwind CSS."
+    role: "Estudiante de Desarrollo de Software",
+    company: "Universidad San Marcos",
+    period: "2022 - Presente",
+    description: "Formación en fundamentos de programación, estructuras de datos, bases de datos y desarrollo de software. Aplicando lo aprendido en proyectos reales desde el primer año."
   }
 ];
 
 const education = [
   {
     degree: "Ingeniería en Sistemas Computacionales",
-    school: "Universidad de Tecnología",
-    period: "2018 - 2022",
+    school: "Universidad San Marcos",
+    period: "2022 - Presente",
   }
 ];
 
@@ -53,7 +53,7 @@ export default function SobreMi() {
       <div className="space-y-4 max-w-2xl">
         <h1 className="text-3xl font-semibold tracking-tight">Sobre Mí</h1>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Soy un apasionado de la tecnología y el desarrollo de software. Me encanta resolver problemas complejos y traducirlos en interfaces de usuario sencillas y elegantes. Mi objetivo es crear código eficiente que tenga un impacto positivo.
+          Soy estudiante de Ingeniería en Sistemas Computacionales en la Universidad San Marcos, con una fuerte pasión por el desarrollo web. Estoy comenzando mi camino profesional construyendo proyectos reales que me permiten aplicar lo que aprendo cada día. Me enfoco en escribir código limpio y crear experiencias de usuario que marquen la diferencia.
         </p>
       </div>
 

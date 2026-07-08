@@ -46,9 +46,9 @@ export default function Contacto() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    
+
     const success = await sendContactEmail(formData);
-    
+
     if (success) {
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
@@ -74,7 +74,7 @@ export default function Contacto() {
         <div className="md:col-span-2 space-y-6">
           <div className="p-6 rounded-lg border border-border/30 bg-card/15 space-y-6">
             <h3 className="text-sm font-bold uppercase tracking-wider">Información de Contacto</h3>
-            
+
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-muted-foreground">
                 <div className="p-2 rounded bg-border/25 text-muted-foreground">
@@ -100,18 +100,18 @@ export default function Contacto() {
             <div className="pt-4 border-t border-border/20">
               <p className="text-[10px] uppercase tracking-wider text-muted-foreground/60 mb-3">Redes Sociales</p>
               <div className="flex items-center gap-2">
-                <a 
-                  href="https://github.com" 
-                  target="_blank" 
-                  rel="noreferrer" 
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noreferrer"
                   className="p-2 rounded border border-border/50 hover:bg-white/5 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Github size={15} />
                 </a>
-                <a 
-                  href="https://linkedin.com" 
-                  target="_blank" 
-                  rel="noreferrer" 
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noreferrer"
                   className="p-2 rounded border border-border/50 hover:bg-white/5 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Linkedin size={15} />
